@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0e192b;
+  color: #fff;
+  font-family: "Outfit, sans-serif.";
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.card {
+  width: 92%;
+  max-width: 300px;
+  background-color: #14253d;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1.2rem;
+}
+.card__images {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__images-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 252, 248, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__images:hover .card__images-layer {
+  opacity: 1;
+}
+
+.card__images-layer svg {
+  width: 48px;
+  height: 48px;
+}
+.card-content {
+  padding: 10px;
+  margin-top: 10px;
+}
+.card-content h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.card-content p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #8bacd9;
+}
+
+.card-elem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#price {
+  color: #05fcf8;
+}
+
+#price::before {
+  content: "Ξ ";
+  margin-right: 5px;
+}
+
+#time::before {
+  content: "🕒";
+  margin-right: 5px;
+}
+
+#time {
+  color: #8bacd9;
+}
+
+.card__creator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card__creator p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+#name {
+  color: #fff;
+}
+
+.attribution {
+  color: #8bacd9;
+  font-size: 10px;
+}
+
+.attribution a {
+  color: #05fcf8;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: #f5f6f6;
+}
+
+.attribution a:active {
+  color: #cbfc05;
+}
