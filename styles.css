@@ -92,6 +92,8 @@ body {
 #price::before {
   content: url("./images/ethereum.svg");
   margin-right: 5px;
+  /* margin-top: 30px;
+  padding-top: 30px; */
 }
 
 #time::before {
